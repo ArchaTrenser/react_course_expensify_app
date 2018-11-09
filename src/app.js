@@ -11,6 +11,16 @@ import './style/style.scss';
 
 const store = configureStore();
 
+const jsx = (
+  <Provider store = {store}>
+    <AppRouter />
+  </Provider>
+)
+ReactDOM.render(jsx,document.getElementById('one'));
+
+
+/*
+
 store.subscribe(() => {
     const state = store.getState();
     const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
@@ -23,9 +33,4 @@ store.dispatch(addExpense({description : 'Rent Bill' ,amount : 300 ,createdAt :1
 
 store.dispatch(setTextFilter(''));
 
-const jsx = (
-  <Provider store = {store}>
-    <AppRouter />
-  </Provider>
-)
-ReactDOM.render(jsx,document.getElementById('one'));
+*/
