@@ -1,0 +1,16 @@
+body{
+
+    font-family: 'Roboto Slab', serif;
+}
+button{
+    cursor: pointer;
+}
+button:disabled
+{
+    cursor:default;
+}
+
+.is__active
+{
+    color: cornflowerblue;
+}
