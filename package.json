@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server pub/",
-    "bulid": "webpack --watch",
+    "bulid:dev": "webpack",
+    "bulid:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest"
   },
@@ -20,6 +21,7 @@
     "bulid": "^1.0.0",
     "css-loader": "0.28.4",
     "dev-server": "^0.0.2",
+    "extract-text-webpack-plugin": "3.0.0",
     "jest": "20.0.4",
     "live-server": "^1.2.0",
     "moment": "2.18.1",
