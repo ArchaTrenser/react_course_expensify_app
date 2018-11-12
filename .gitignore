@@ -1,1 +1,5 @@
 node_modules/
+pub/bundle.js
+pub/bundle.js.map
+pub/styles.css
+pub/styles.css.map

@@ -6,28 +6,24 @@ module.exports = (env) =>
     const isProduction = env === 'production';
     const CSSExtract = new ExtractTextPlugin('styles.css');
 
-    console.log("env",env);
     return {
         entry : './src/app.js',
         output : {
             path : path.join(__dirname,'pub'),
             filename : 'bundle.js'
         },
-        module : 
-        {
-            rules: [
-                {
+        module : {
+            rules: [{
                     loader : 'babel-loader',
                     test : /\.js$/,
                     exclude : /node_modules/
-                },
-                {
+                }, {
                     test : /\.s?css$/,
                     use : CSSExtract.extract({
                         use: [
                             {
                                 loader :'css-loader',
-                                option:{
+                                options:{
                                     sourceMap :true
                                 }
                             },
