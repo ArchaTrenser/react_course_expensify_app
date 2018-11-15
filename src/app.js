@@ -9,6 +9,7 @@ import getVisibleExpenses from './selectors/expenses';
 import {firebase} from './firebase/firebase';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import LoaderPage from './components/LoaderPage';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
@@ -30,7 +31,7 @@ const renderApp =() =>
   }
 }
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('one'));
+ReactDOM.render(<LoaderPage />, document.getElementById('one'));
 
 firebase.auth().onAuthStateChanged((user)=>
 {
